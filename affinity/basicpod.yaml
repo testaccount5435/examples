@@ -7,4 +7,4 @@ metadata:
 spec:
   containers:
   - name: basicpod
-    image: docker/io/papatzis1978/test
+    image: docker.io/papatzis1978/test
