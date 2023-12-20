@@ -13,7 +13,7 @@ spec:
     metadata:
       name: affinity-pod
       labels:
-        app: affinity-pod
+        app: affinity-pod1
     spec:
       affinity:
         podAffinity:
