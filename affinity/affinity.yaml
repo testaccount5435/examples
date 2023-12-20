@@ -5,7 +5,7 @@ metadata:
   labels:
     app: affinity
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     #matchLabels must match template labels  
     matchLabels:
