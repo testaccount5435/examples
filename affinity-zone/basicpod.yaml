@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: basicpod
+  labels:
+    security: S1
+spec:
+  containers:
+  - name: basicpod
+    image: docker.io/papatzis1978/test
