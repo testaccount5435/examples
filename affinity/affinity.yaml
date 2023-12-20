@@ -26,3 +26,5 @@ spec:
       containers:
       - name: affinity-pod
         image: docker.io/papatzis1978/test
+        ports:
+        - containerPort: 8080
