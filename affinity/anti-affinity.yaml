@@ -1,1 +1,33 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anti-affinity-deployment
+  labels:
+    app: anti-affinity
+spec:
+  replicas: 6
+  selector:
+    #matchLabels must match template labels  
+    matchLabels:
+      app: anti-affinity-pod
+  template:
+    metadata:
+      name: anti-affinity-pod
+      labels:
+        app: anti-affinity-pod
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: security
+                operator: In
+                values:
+                - S1
+            topologyKey: kubernetes.io/hostname
+      containers:
+      - name: anti-affinity-pod
+        image: docker.io/papatzis1978/test
+        ports:
+        - containerPort: 8080
