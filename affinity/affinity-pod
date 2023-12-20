@@ -9,12 +9,12 @@ spec:
   selector:
     #matchLabels must match template labels  
     matchLabels:
-      app: affinity-pod
+      app: affinity
   template:
     metadata:
       name: affinity-pod
       labels:
-        app: affinity-pod
+        app: affinity
     spec:
       affinity:
         nodeAffinity:
