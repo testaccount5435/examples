@@ -5,7 +5,7 @@ metadata:
 spec:
   affinity:
     podAffinity:
-      requiredDuringSchedulingIgnoreDuringExecution:
+      requiredDuringSchedulingaaaIgnoreDuringExecution:
       - labelSelector:
           matchExpressions:
           - key: security
