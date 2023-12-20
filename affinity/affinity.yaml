@@ -8,7 +8,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: affinity
+      app: affinity-pod
   template:
     metadata:
       name: affinity-pod
