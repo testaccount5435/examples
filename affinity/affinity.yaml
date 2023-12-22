@@ -26,6 +26,7 @@ spec:
                 values:
                 - S1
             topologyKey: kubernetes.io/hostname
+      imagePullPolicy: Always
       containers:
       - name: affinity-pod
         image: docker.io/papatzis1978/test
